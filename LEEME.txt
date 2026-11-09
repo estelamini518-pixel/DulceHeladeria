@@ -1,0 +1,36 @@
+DULCE NUBE HELADERÍA — PWA MEJORADA
+===================================
+
+CONTENIDO
+- Catálogo con búsqueda y filtros.
+- Carrito con cantidades y cálculo automático.
+- Registro y panel local de pedidos con estados.
+- Notificaciones del navegador para el registro de pedidos y cambios de estado.
+- Manifest con iconos PNG de 192x192 y 512x512.
+- Service Worker y caché de archivos para uso sin conexión.
+- Diseño adaptable a móvil y computadora.
+
+CÓMO EJECUTAR
+1. Extrae la carpeta del ZIP.
+2. Abre la carpeta en Visual Studio Code.
+3. Instala/usa la extensión Live Server.
+4. Clic derecho en index.html > Open with Live Server.
+5. No abras index.html directamente con file://. Para PWA y notificaciones usa localhost o HTTPS.
+
+CÓMO INSTALAR
+- Chrome/Edge en computadora: abre la aplicación desde localhost/HTTPS y usa el botón Instalar cuando aparezca; también puede aparecer el icono de instalación en la barra de direcciones o Menú > Instalar aplicación.
+- Android: abre la dirección HTTPS en Chrome y selecciona Instalar aplicación o Agregar a pantalla de inicio.
+- iPhone/iPad: abre en Safari > Compartir > Agregar a pantalla de inicio.
+
+NOTIFICACIONES
+Pulsa "Activar notificaciones" y acepta el permiso del navegador. En esta versión se muestran notificaciones locales cuando la aplicación está abierta y se registra un pedido o se cambia su estado.
+IMPORTANTE: las notificaciones push en segundo plano, cuando la aplicación está cerrada, requieren un servidor, suscripción Push y claves VAPID. Esta versión no incluye un servidor ni envía pedidos a un negocio real.
+
+DATOS
+Los pedidos y el carrito se guardan en localStorage del navegador. No se sincronizan entre dispositivos ni se comparten con otros usuarios. Si borras los datos del sitio, pueden perderse.
+
+PRUEBA OFFLINE
+1. Abre la aplicación con Internet y espera a que cargue.
+2. En DevTools (F12) > Application, comprueba Manifest y Service Worker.
+3. En DevTools > Network selecciona Offline y recarga.
+4. Los archivos guardados en caché deben seguir disponibles. Las imágenes externas solo estarán disponibles si ya se descargaron y quedaron en caché.
